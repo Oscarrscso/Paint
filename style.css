@@ -23,6 +23,7 @@ body
     width: 500px;
     height: 500px;
     border: solid 2px #423D34;
+    border-radius: 15px;
   }
   
   
@@ -31,8 +32,8 @@ body
 
     display: flex;
     flex-direction: column;
-    top: 0px;
-    left: 0px;
+    top: 25px;
+    left: 25px;
     position: absolute;
     
 }
@@ -64,4 +65,12 @@ body
 {
     border: solid 3px #E8E7E3;
     transform: scale(1.1);
+}
+#slider-container
+{
+    color: #FBF9F7;
+    width: 200px;
+    margin: 10px;
+    margin-left: 0px;
+    text-align: center;
 }

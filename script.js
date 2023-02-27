@@ -1,18 +1,22 @@
 const canvas = document.getElementById('canvas');
+const sizeSlider = document.getElementById('slider');
+const sizeSliderText = document.getElementById('sizeSliderText');
+
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 
 const palleteBTNS = document.querySelectorAll('.pallete-btn');
 
 let drawColor = 'red';
+let size = 10;
 
 const drawBox = (x, y) => {
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = drawColor;
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, 2*Math.PI);
-    ctx.fill();
-  }
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = drawColor;
+  ctx.beginPath();
+  ctx.arc(x, y, size, 0, 2*Math.PI);
+  ctx.fill();
+}
 
 let isDrawing = false;
 
@@ -40,3 +44,8 @@ palleteBTNS.forEach(btn => {
   });
 });
 
+sizeSlider.addEventListener('input', e => 
+{
+    size = e.target.value;
+    sizeSliderText.innerHTML = `Size: ${e.target.value}`;
+});
