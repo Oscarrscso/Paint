@@ -4,8 +4,64 @@
     padding: 0;
 }
 
-
 body
 {
     background-color: #1a1812;
+}
+
+#container {
+    position: relative;
+    display: grid;
+    width: 100%; /* or specify a fixed width */
+    height: 100vh; /* or specify a fixed height */
+  }
+  
+  #canvas {
+    background-color: #ffffff;
+    align-self: center;
+    justify-self: center;
+    width: 500px;
+    height: 500px;
+    border: solid 2px #423D34;
+  }
+  
+  
+.pallete-buttons 
+{
+
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    
+}
+
+.pallete-btn
+{
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+
+    border: solid 2px #E8E7E3;
+    border-radius: 15px;
+
+    transition: ease-in-out 0.05s;
+}
+
+.pallete-btn:hover
+{
+    transform: scale(1.06);
+}
+
+.pallete-btn:active
+{
+    transform: scale(1);
+    border: solid 3px #E8E7E3;
+}
+
+.activeColor 
+{
+    border: solid 3px #E8E7E3;
+    transform: scale(1.1);
 }
