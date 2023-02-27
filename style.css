@@ -2,6 +2,9 @@
 {
     margin: 0;
     padding: 0;
+    font-family: monospace;
+    font-size: 17px;
+    transition: ease-in-out 0.04s;
 }
 
 body
@@ -26,6 +29,10 @@ body
     border-radius: 15px;
   }
   
+  canvas:hover
+  {
+    cursor: crosshair;
+  }
   
 .pallete-buttons 
 {
@@ -47,30 +54,41 @@ body
     border: solid 2px #E8E7E3;
     border-radius: 15px;
 
-    transition: ease-in-out 0.05s;
+ 
 }
 
 .pallete-btn:hover
 {
-    transform: scale(1.06);
+    transform: scale(1.15);
+    border: solid 3px #E8E7E3;
+    cursor: pointer;
 }
 
 .pallete-btn:active
 {
-    transform: scale(1);
+    transform: scale(1.1);
     border: solid 3px #E8E7E3;
 }
 
 .activeColor 
 {
     border: solid 3px #E8E7E3;
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 #slider-container
 {
+    position: absolute;
     color: #FBF9F7;
     width: 200px;
     margin: 10px;
     margin-left: 0px;
+    bottom: 25px;
     text-align: center;
+}
+
+
+#slider:hover
+{
+    transform: scale(1.07);
+    cursor: ew-resize;
 }

@@ -1,16 +1,17 @@
 const canvas = document.getElementById('canvas');
-const sizeSlider = document.getElementById('slider');
-const sizeSliderText = document.getElementById('sizeSliderText');
-
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 
 const palleteBTNS = document.querySelectorAll('.pallete-btn');
+const sizeSlider = document.getElementById('slider');
+const sizeSliderText = document.getElementById('sizeSliderText');
 
 let drawColor = 'red';
+document.getElementById("red").classList.add('activeColor')
 let size = 10;
 
-const drawBox = (x, y) => {
+const drawBox = (x, y) => 
+{
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = drawColor;
   ctx.beginPath();
