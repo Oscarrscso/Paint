@@ -20,12 +20,11 @@ body
   }
   
   #canvas {
-    background-color: #ffffff;
+    background-color: #E8E7E3;
     align-self: center;
     justify-self: center;
     width: 500px;
     height: 500px;
-    border: solid 2px #423D34;
     border-radius: 15px;
   }
   
